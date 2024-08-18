@@ -2,8 +2,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 export default function About() {
   return (
-    <div className="mt-40 px-10 md:px-20 lg:px-32" id="about">
-      <h1 className="text-4xl font-bold tracking-tight mb-8 -tracking-3">
+    <div className="mt-40 px-10 md:px-20 lg:px-32">
+      <h1
+        className="text-4xl font-bold tracking-tight mb-8 -tracking-3"
+        
+      >
         About Me
       </h1>
       <div className="flex flex-col lg:flex-row">

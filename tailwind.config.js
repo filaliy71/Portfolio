@@ -12,11 +12,10 @@ module.exports = {
   prefix: "",
   theme: {
     letterSpacing: {
-      1: "0px",
+      1: "1px",
       2: "2px",
       3: "3px",
       4: "4px",
-      4: "5px",
     },
     container: {
       center: true,
