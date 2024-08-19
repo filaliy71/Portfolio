@@ -46,7 +46,7 @@ export default function Home() {
             </span>
             ,<br />I create dynamic and responsive applications.
             <br />
-            Let's bring your ideas to life.
+            Let&apos;s bring your ideas to life.
           </p>
           <div className="flex justify-center md:justify-start space-x-4 mt-3">
             <Link

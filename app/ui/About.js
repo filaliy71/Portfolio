@@ -3,10 +3,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <div className="mt-40 px-10 md:px-20 lg:px-32">
-      <h1
-        className="text-4xl font-bold tracking-tight mb-8 -tracking-3"
-        
-      >
+      <h1 className="text-4xl font-bold tracking-tight mb-8 -tracking-3">
         About Me
       </h1>
       <div className="flex flex-col lg:flex-row">
@@ -63,14 +60,14 @@ export default function About() {
             Based in Fes, Morocco
           </h2>
           <p className="text-pretty font-medium">
-            Hi, I'm Youssef, a full-stack developer with a passion for creating
-            clean and intuitive UI/UX designs. I primarily work with React and
-            Next.js for front-end development, and Node.js and Laravel for the
-            back-end.
+            Hi, I&apos;m Youssef, a full-stack developer with a passion for
+            creating clean and intuitive UI/UX designs. I primarily work with
+            React and Next.js for front-end development, and Node.js and Laravel
+            for the back-end.
             <br /> In addition to my core technologies, I have expertise in Git,
-            Scrum, Docker, HTML, CSS, PHP, and Tailwind CSS. I'm also skilled in
-            using GSAP and Framer Motion for animations, JavaScript, Figma for
-            design, and jQuery for dynamic web interactions.
+            Scrum, Docker, HTML, CSS, PHP, and Tailwind CSS. I&apos;m also
+            skilled in using GSAP and Framer Motion for animations, JavaScript,
+            Figma for design, and jQuery for dynamic web interactions.
           </p>
         </div>
       </div>
