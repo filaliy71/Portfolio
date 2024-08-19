@@ -16,6 +16,7 @@ export default function Page() {
                 alt={`Project`}
                 layout="fill"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a
@@ -43,6 +44,7 @@ export default function Page() {
                 alt={`Project`}
                 layout="fill"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 flex items-center gap-2 justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a
@@ -80,6 +82,7 @@ export default function Page() {
                 alt={`Project`}
                 layout="fill"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 gap-2 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a
@@ -115,6 +118,7 @@ export default function Page() {
                 alt={`Project`}
                 layout="fill"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a
@@ -144,6 +148,7 @@ export default function Page() {
                 alt={`Project`}
                 layout="fill"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a
@@ -171,6 +176,7 @@ export default function Page() {
                 alt={`Project`}
                 layout="fill"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a
@@ -200,6 +206,7 @@ export default function Page() {
                 alt={`Project`}
                 layout="fill"
                 quality={100}
+                loading="lazy"
               />
               <div className="absolute inset-0 gap-2 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <a
