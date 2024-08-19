@@ -39,7 +39,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight bg-gradient-to-r from-slate-400 to-slate-900 bg-clip-text text-transparent -tracking-3">
             Full-Stack developer.
           </h2>
-          <p className="tracking-tight font-semibold italic text-2xl md:text-3xl -tracking-1 md:-tracking-3">
+          <p className="tracking-tight font-semibold text-2xl md:text-3xl text-pretty md:-tracking-3">
             I build things on the web. Based in
             <span className="bg-gradient-to-l from-green-800 via-red-500 to-red-700 bg-clip-text text-transparent">
               {" "}

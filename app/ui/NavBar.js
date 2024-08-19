@@ -55,7 +55,9 @@ function NavBar() {
             </button>
           </div>
           <div id="logo" className="text-2xl md:text-3xl font-bold -tracking-3">
-            <h1>Yusuf.dev</h1>
+            <Link href={"/"}>
+              <h1>Yusuf.dev</h1>
+            </Link>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-8">
             <ul className="flex space-x-8 font-semibold -tracking-2 text-xl">
