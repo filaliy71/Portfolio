@@ -71,7 +71,7 @@ function NavBar() {
               </li>
               <li>
                 <Link href="/project" className="hover:text-blue-500">
-                  Project
+                  Projects
                 </Link>
               </li>
               <li>
@@ -109,7 +109,7 @@ function NavBar() {
               href="/project"
               className="block text-base font-semibold -tracking-2 hover:text-blue-500"
             >
-              Project
+              Projects
             </Link>
             <Link
               href="/#contact"

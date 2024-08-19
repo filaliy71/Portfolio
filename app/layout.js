@@ -3,6 +3,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import NavBar from "./ui/NavBar";
 import clsx from "clsx";
+import Footer from "./ui/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -23,8 +24,8 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <NavBar />
-          
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

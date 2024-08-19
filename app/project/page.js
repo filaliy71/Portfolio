@@ -70,7 +70,7 @@ export default function Page() {
                 Electronic E-commerce
               </h2>
               <p className="-tracking-1 font-medium dark:text-gray-300 text-gray-600">
-                React, Tailwind(DaisyUI), Rest Api
+                React, Tailwind(DaisyUI), Api
               </p>
             </div>
           </div>
@@ -191,10 +191,10 @@ export default function Page() {
             </div>
             <div className="p-2">
               <h2 className="text-2xl font-bold -tracking-2">
-                Movie Streaming
+                Movies Streaming
               </h2>
               <p className="-tracking-1 font-medium dark:text-gray-300 text-gray-600">
-                React, Tailwind, Rest Api
+                React, Tailwind, Api
               </p>
             </div>
           </div>

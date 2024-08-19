@@ -12,6 +12,7 @@ import Html from "./images/html";
 import Css from "./images/css";
 import Javascript from "./images/javascript";
 import About from "./ui/About";
+import Contact from "./ui/Contact";
 
 export default function Home() {
   return (
@@ -162,6 +163,7 @@ export default function Home() {
       </div>
       <div id="about"></div>
       <About />
+      <Contact />
     </main>
   );
 }
