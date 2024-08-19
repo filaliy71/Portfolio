@@ -8,7 +8,7 @@ export default function Contact() {
         <h1 class="text-5xl font-bold mb-6 -tracking-3">Contact</h1>
         <div class="space-y-4">
           <h2 class="flex items-center text-2xl font-semibold leading-tight mb-6 -tracking-1">
-            <span class="ml-6">Let's connect! I'm just a message away</span>
+            <span class="ml-6">Let&apos;s connect! I&apos;m just a message away</span>
             <span class="inline-flex items-center w-20 h-20">
               <Image
                 src="/Backhand.png"
