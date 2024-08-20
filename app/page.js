@@ -2,7 +2,6 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Nextjs from "./images/nextjs";
 import Laravel from "./images/laravel";
 import React from "./images/react";
@@ -13,19 +12,41 @@ import Css from "./images/css";
 import Javascript from "./images/javascript";
 import About from "./ui/About";
 import Contact from "./ui/Contact";
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 export default function Home() {
+  const variants = {
+    hidden: { opacity: 0, y: 20, transition: { duration: 0.5 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  const stagger = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const controls = useAnimation();
+
+  useEffect(() => {
+    const animation = async () => {
+      await controls.start("visible");
+    };
+
+    animation();
+  }, [controls]);
   return (
-    <main id="home" className="md:py-20 h-full overflow-x-hidden relative">
-      <div className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute ml-48"></div>
-      <div
-        style={{ marginLeft: "85%", marginBottom: "200px" }}
-        className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute"
-      ></div>
+    <main id="home" className="md:py-20 h-full">
+      <div className="rounded-full bg-blue-400 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute ml-48"></div>
       <div className="container mx-auto flex flex-col-reverse md:flex-row justify-around h-full items-center p-5">
-        <div className="mt-10 z-10 text-center md:text-left ">
-          <h1 className="text-4xl md:text-6xl font-bold z-10 flex justify-center md:justify-start items-center -tracking-3">
-            Hi!, I’m Yusuf
+        <div className="mt-10 z-10 text-center md:text-left">
+          <h1 className="text-4xl md:text-6xl font-bold z-10 flex justify-center md:justify-start items-center -tracking-4">
+            Hi !, I’m Yusuf
             <span className="inline-block ml-2">
               <Player
                 src="/me_handwave.json"
@@ -36,10 +57,10 @@ export default function Home() {
             </span>
           </h1>
 
-          <h2 className="text-3xl md:text-4xl font-semibold tracking-tight bg-gradient-to-r from-slate-400 to-slate-900 bg-clip-text text-transparent -tracking-3">
+          <h2 className="text-3xl md:text-4xl font-semibold bg-gradient-to-r from-sky-400 to-blue-700 bg-clip-text text-transparent -tracking-3">
             Full-Stack developer.
           </h2>
-          <p className="tracking-tight font-semibold text-2xl md:text-3xl text-pretty md:-tracking-3">
+          <p className="font-semibold text-2xl md:text-3xl text-pretty md:-tracking-3 -tracking-2">
             I build things on the web. Based in
             <span className="bg-gradient-to-l from-green-800 via-red-500 to-red-700 bg-clip-text text-transparent">
               {" "}
@@ -84,82 +105,111 @@ export default function Home() {
             </span>
             <div className="flex flex-wrap justify-center md:justify-start space-x-3 md:space-x-4 mt-4 md:mt-0">
               <motion.div
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                variants={stagger}
+                initial="hidden"
+                animate={controls}
+                className="flex flex-wrap justify-center md:justify-start space-x-3 md:space-x-4 mt-4 md:mt-0"
               >
-                <Html />
-              </motion.div>
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Html />
+                </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: -10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Css />
-              </motion.div>
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: -10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Css />
+                </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Javascript />
-              </motion.div>
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Javascript />
+                </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: -10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Nextjs />
-              </motion.div>
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: -10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Nextjs />
+                </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <React />
-              </motion.div>
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <React />
+                </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: -10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Laravel />
-              </motion.div>
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: -10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Laravel />
+                </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Node />
-              </motion.div>
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: 10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Node />
+                </motion.div>
 
-              <motion.div
-                whileHover={{ scale: 1.2, rotate: -10 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Tailwind />
+                <motion.div
+                  variants={variants}
+                  className="logo"
+                  whileHover={{ scale: 1.2, rotate: -10 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Tailwind />
+                </motion.div>
               </motion.div>
             </div>
           </div>
         </div>
-        <div className="mt-10 md:mt-0">
+        <motion.div
+          initial={{ x: 550 }}
+          animate={{ x: 0 }}
+          transition={{
+            duration: 1.2,
+            ease: [0.6, -0.05, 0.01, 0.99],
+          }}
+          className="md:mt-0"
+        >
           <Image
             src="/code-typing-concept-illustration.png"
             width={300}
             height={300}
             alt="coding pic"
-            quality={100}
-            loading="eager"
-            className="drop-shadow-lg"
+            className="drop-shadow-lg w-96"
           />
-        </div>
+        </motion.div>
       </div>
       <div id="about"></div>
       <About />

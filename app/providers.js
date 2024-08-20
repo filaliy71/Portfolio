@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
-import ThemeSwitcher from "./ui/ThemeSwitcher";
 
 export function Providers({ children }) {
   return (

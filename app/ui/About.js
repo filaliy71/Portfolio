@@ -1,11 +1,45 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+
 export default function About() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
   return (
-    <div className="mt-40 px-10 md:px-20 lg:px-32">
-      <h1 className="text-5xl font-bold mb-8 -tracking-3">About Me</h1>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={containerVariants}
+      className="mt-40 px-10 md:px-20 lg:px-32"
+    >
+      <motion.h1
+        variants={itemVariants}
+        className="text-5xl font-bold mb-8 -tracking-3"
+      >
+        About Me
+      </motion.h1>
       <div className="flex flex-col lg:flex-row">
-        <div className="mb-12 lg:mb-0 lg:mr-16">
+        <motion.div variants={itemVariants} className="mb-8 lg:mb-0 lg:mr-16">
           <Image
             src="/about.png"
             width={480}
@@ -50,8 +84,8 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
-        <div className="max-w-xl lg:text-left">
+        </motion.div>
+        <motion.div variants={itemVariants} className="max-w-xl lg:text-left">
           <h2 className="text-3xl font-semibold mb-4 -tracking-2">
             Full-Stack Developer
             <br />
@@ -67,14 +101,14 @@ export default function About() {
             skilled in using GSAP and Framer Motion for animations, JavaScript,
             Figma for design, and jQuery for dynamic web interactions.
           </p>
-        </div>
+        </motion.div>
       </div>
-      <div className="p-6 mt-2 space-y-4">
+      <motion.div variants={itemVariants} className="p-6 mt-2 space-y-4">
         <h4 className="text-2xl font-bold first-letter:mb-4 border-b-2 border-blue-500 inline-block -tracking-2">
           Skills & Tools
         </h4>
 
-        <div>
+        <motion.div variants={itemVariants}>
           <h5 className="text-xl font-semibold text-blue-500 mb-2 -tracking-1">
             Frameworks and Libraries
           </h5>
@@ -82,9 +116,9 @@ export default function About() {
             React, NextJS, Tailwind, MaterialUI, DaisyUI, Redux, GSAP, Framer,
             Laravel, Nodejs/Express
           </p>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={itemVariants}>
           <h5 className="text-xl font-semibold text-blue-500 mb-2">
             The Obvious
           </h5>
@@ -92,15 +126,15 @@ export default function About() {
             HTML, CSS, JavaScript, PHP, MySQL, MongoDB, REST APIs/JSON, React
             Hooks, Fetch/Axios, WordPress, Inertia.js
           </p>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div variants={itemVariants}>
           <h5 className="text-xl font-semibold text-blue-500 mb-2 -tracking-1">
             Tools
           </h5>
           <p>Git, Docker, Figma, GitHub/GitLab, SonarQube, Jenkins, Jira</p>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

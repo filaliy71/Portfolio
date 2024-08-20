@@ -1,4 +1,4 @@
-import { Inter, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import NavBar from "./ui/NavBar";
@@ -6,7 +6,6 @@ import clsx from "clsx";
 import Footer from "./ui/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
-const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
@@ -25,6 +24,10 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <NavBar />
+          <div
+            style={{ marginLeft: "80%", marginTop: "30px" }}
+            className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute"
+          ></div>
           {children}
           <Footer />
           <Analytics />
