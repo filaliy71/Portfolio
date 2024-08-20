@@ -2,7 +2,14 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <main id="project" className="min-h-screen py-10 overflow-x-hidden">
+    <main
+      id="project"
+      className="min-h-screen py-10 overflow-x-hidden relative"
+    >
+      <div
+        style={{ marginLeft: "80%", marginTop: "30px" }}
+        className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute"
+      ></div>
       <div className="max-w-7xl mx-auto px-4 md:px-16">
         <h1 className="text-start text-5xl font-bold -tracking-4 mb-8">
           My Projects

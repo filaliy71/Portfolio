@@ -9,7 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Yusuf.dev Portfolio",
+  title: "Yusuf Portfolio",
   description: "youssef portfolio",
 };
 
@@ -24,10 +24,7 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <NavBar />
-          <div
-            style={{ marginLeft: "80%", marginTop: "30px" }}
-            className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute"
-          ></div>
+          
           {children}
           <Footer />
           <Analytics />
