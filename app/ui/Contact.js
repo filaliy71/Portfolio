@@ -42,11 +42,14 @@ export default function Contact() {
           Contact
         </motion.h1>
         <div className="space-y-4">
-          <h2 className="flex items-center text-2xl font-semibold leading-tight mb-6 -tracking-1">
-            <motion.span className="ml-6" variants={itemVariants}>
+          <motion.h2
+            variants={itemVariants}
+            className="flex items-center text-2xl font-semibold leading-tight mb-6 -tracking-1"
+          >
+            <span className="ml-6">
               Let&apos;s connect! I&apos;m just a message away
-            </motion.span>
-            <span className="inline-flex items-center w-20 h-20 variants={itemVariants}">
+            </span>
+            <span className="inline-flex items-center w-20 h-20">
               <Image
                 src="/Backhand.png"
                 width={30}
@@ -55,7 +58,7 @@ export default function Contact() {
                 className="w-6 h-6 object-contain"
               />
             </span>
-          </h2>
+          </motion.h2>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <motion.div

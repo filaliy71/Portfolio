@@ -56,11 +56,19 @@ export default function Home() {
       id="home"
       className="md:py-20 w-full h-full overflow-x-hidden relative"
     >
-      <div
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        animate="visible"
         style={{ marginLeft: "80%", marginTop: "30px" }}
         className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute"
-      ></div>
-      <div className="rounded-full bg-blue-400 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute ml-48"></div>
+      ></motion.div>
+      <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        animate="visible"
+        className="rounded-full bg-blue-400 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute ml-48"
+      ></motion.div>
       <div className="container mx-auto flex flex-col-reverse md:flex-row justify-around h-full items-center p-5">
         <motion.div
           variants={itemVariants}
