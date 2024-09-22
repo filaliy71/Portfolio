@@ -17,8 +17,8 @@ import { motion, useAnimation } from "framer-motion";
 
 export default function Home() {
   const variants = {
-    hidden: { opacity: 0, y: 20, transition: { duration: 0.5 } },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 20, transition: { duration: 0.4 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
   const stagger = {
@@ -91,7 +91,7 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-semibold bg-gradient-to-r from-sky-400 to-blue-700 bg-clip-text text-transparent -tracking-3">
             Full-Stack developer.
           </h2>
-          <p className="font-semibold text-2xl md:text-3xl text-pretty md:-tracking-3 -tracking-2">
+          <p className="font-semibold text-2xl md:text-3xl text-pretty  -tracking-2">
             I build things on the web. Based in
             <span className="bg-gradient-to-l from-green-800 via-red-500 to-red-700 bg-clip-text text-transparent">
               {" "}
@@ -101,7 +101,7 @@ export default function Home() {
             <br />
             Let&apos;s bring your ideas to life.
           </p>
-          <div className="flex justify-center md:justify-start space-x-4 mt-3">
+          <div className="flex justify-center md:justify-start space-x-4 mt-5">
             <Link
               target="_blank"
               href="https://github.com/filaliy71"
@@ -118,7 +118,7 @@ export default function Home() {
             </Link>
             <Link
               target="_blank"
-              href="https://linkedin.com/in/youssef-filali-talha-b23321297"
+              href="https://linkedin.com/in/filali-youssef"
               className="cursor-pointer hover:scale-125 transition-all duration-300"
             >
               <svg
@@ -129,6 +129,15 @@ export default function Home() {
                 <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
               </svg>
             </Link>
+            <div className="mt-1 hover:scale-105 transition-all duration-300">
+              <a
+                href="/Resume.pdf"
+                title="Download my CV"
+                class="ml-1 px-3 py-3 font-bold -tracking-1 rounded-full shadow bg-black dark:bg-slate-100 text-white dark:text-black"
+              >
+                Download My CV
+              </a>
+            </div>
           </div>
           <div className="mt-12 md:mt-24 flex flex-col md:flex-row justify-center md:justify-start items-center">
             <span className="text-lg font-semibold md:text-xl w-full md:w-44 text-center md:text-left">
@@ -228,7 +237,7 @@ export default function Home() {
           variants={itemVariants}
           initial="hidden"
           animate="visible"
-          className="md:mt-0"
+          className="md:mt-0 md:mb-20"
         >
           <Image
             src="/code-typing-concept-illustration.png"

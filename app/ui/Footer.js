@@ -7,10 +7,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <p className="text-sm">
-              &copy; {new Date().getFullYear()} Your Company Name. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Made with 💖 by Youssef Filali
+              Talha
             </p>
-          </div>
+          </div>  
           <div className="flex space-x-6">
             <Link
               href="https://github.com/filaliy71"
