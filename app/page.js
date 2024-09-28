@@ -133,7 +133,7 @@ export default function Home() {
               <a
                 href="/Resume.pdf"
                 title="Download my CV"
-                class="ml-1 px-3 py-3 font-bold -tracking-1 rounded-full shadow bg-black dark:bg-slate-100 text-white dark:text-black"
+                class="className-1 px-3 py-3 font-bold -tracking-1 rounded-full shadow bg-black dark:bg-slate-100 text-white dark:text-black"
               >
                 Download My CV
               </a>

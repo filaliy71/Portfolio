@@ -10,7 +10,10 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Yusuf Portfolio",
-  description: "youssef portfolio",
+  applicationName: "youssef filali portfolio",
+  description: "youssef filali talha portfolio",
+  creator: "Youssef filali talha",
+  keywords:['youssef','filali','talha','portfolio','youssef portfolio','Next.js', 'React']
 };
 
 export default function RootLayout({ children }) {
@@ -24,7 +27,7 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <NavBar />
-          
+
           {children}
           <Footer />
           <Analytics />
