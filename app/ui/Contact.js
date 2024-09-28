@@ -1,4 +1,4 @@
-
+"use client";
 import { Mail, MapPinHouse } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

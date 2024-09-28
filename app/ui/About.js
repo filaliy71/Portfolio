@@ -1,4 +1,4 @@
-
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -45,7 +45,7 @@ export default function About() {
             <Image
               src="/about.png"
               width={480}
-              height={500}
+              height={480}
               alt="coding pic"
               className="rounded-2xl"
             />

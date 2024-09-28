@@ -245,6 +245,7 @@ export default function Home() {
             height={300}
             alt="coding pic"
             className="drop-shadow-lg w-96"
+            priority
           />
         </motion.div>
       </div>
