@@ -13,7 +13,8 @@ export const metadata = {
   applicationName: "youssef filali portfolio",
   description: "youssef filali talha portfolio",
   creator: "Youssef filali talha",
-  keywords:['youssef','filali','talha','portfolio','youssef portfolio','Next.js', 'React']
+  keywords:['youssef','filali','talha','portfolio','youssef portfolio','Next.js', 'React'],
+  verification:{ google: "glZe581_787_nWNwfyop93WaAxbxNJg3qYYXQpFiuDw" }
 };
 
 export default function RootLayout({ children }) {
