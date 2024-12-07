@@ -1,8 +1,15 @@
+import Head from "next/head";
 import Image from "next/image";
 
 export default function Page() {
   return (
     <main id="project" className="min-h-screen py-10 overflow-x-hidden">
+      <Head>
+        <title>Yusuf Portfolio | Projects</title>
+        <meta name="description" content="Explore the portfolio of Yusuf, a skilled Full-Stack Developer." />
+        <meta property="og:title" content="Yusuf Portfolio | Projects" />
+        <meta property="og:description" content="Explore the portfolio of Yusuf, a skilled Full-Stack Developer." />
+      </Head>
       <div className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute right-1 "></div>
       <div className="max-w-7xl mx-auto px-4 md:px-16">
         <h1 className="text-start text-5xl font-bold -tracking-4 mb-8">My Projects</h1>

@@ -26,7 +26,7 @@ export default function About() {
   };
 
   return (
-    <motion.div id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={containerVariants} className="mt-70 px-10 md:px-20 lg:px-32">
+    <motion.div id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={containerVariants} className=" px-10 md:px-20 lg:px-32">
       <div className="max-w-7xl mx-auto">
         <motion.h1 variants={itemVariants} className="text-5xl font-bold mb-8 -tracking-3">
           About Me
@@ -89,7 +89,7 @@ export default function About() {
 
           <motion.div variants={itemVariants}>
             <h5 className="text-xl font-semibold text-blue-500 mb-2">The Obvious</h5>
-            <p>HTML, CSS, JavaScript, PHP, MySQL, MongoDB, REST APIs/JSON, React Hooks, Fetch/Axios, WordPress, Inertia.js</p>
+            <p>HTML, CSS, JavaScript, WordPress, WebFlow PHP, MySQL, MongoDB, REST APIs/JSON, React Hooks, Fetch/Axios, Inertia.js</p>
           </motion.div>
 
           <motion.div variants={itemVariants}>

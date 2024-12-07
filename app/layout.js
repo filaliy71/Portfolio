@@ -32,12 +32,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <title>Yusuf Portfolio | Full-Stack Developer</title>
-        <meta name="description" content="Explore the portfolio of Yusuf, a skilled Full-Stack Developer." />
-        <meta name="keywords" content="Yusuf, Portfolio, Next.js, React, Developer" />
+        <meta name="keywords" content="Yusuf, Portfolio, Next.js, React, Developer, youssef filali talha, filali, talha, youssef" />
         <link rel="canonical" href="https://youssef-filali.vercel.app" />
-        <meta property="og:title" content="Yusuf Portfolio" />
-        <meta property="og:description" content="Explore the portfolio of Yusuf, a skilled Full-Stack Developer." />
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:url" content="https://youssef-filali.vercel.app" />
         <meta name="twitter:card" content="summary_large_image" />
