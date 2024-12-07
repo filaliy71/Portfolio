@@ -9,7 +9,7 @@ import { Montserrat, Roboto } from "next/font/google";
 import Head from "next/head";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
-const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
+// const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
 // export const metadata = {
 //   title: "Home | Yusuf Portfolio",
