@@ -83,7 +83,7 @@ function HomePageBanner() {
           <Image src="/code-typing-animate.svg" width={384} height={384} alt="coding pic" className="drop-shadow-lg w-96" priority layout="intrinsic" />{" "}
         </motion.div>
       </div>
-      <div className="flex justify-center max-md:py-12">
+      <div className="flex justify-center max-md:py-12" variants={itemVariants} initial="hidden" animate="visible">
         <div className="inline-flex w-3/5 max-md:w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
           <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
             {techLogos.map((logo, index) => (
@@ -95,7 +95,7 @@ function HomePageBanner() {
           <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8" aria-hidden="true">
             {techLogos.map((logo, index) => (
               <li key={index}>
-                <Image src={logo.src} alt={logo.alt} width={50} height={50} className="rounded-md max-md:w-12 max-md:h-12" priority />
+                <Image src={logo.src} alt={logo.alt} width={50} height={50} className="rounded-md max-md:w-12 max-md:h-12" priority loading="lazy" />
               </li>
             ))}
           </ul>
