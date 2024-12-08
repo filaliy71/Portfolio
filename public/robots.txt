@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://youssef-filali.vercel.app
+
+# Sitemaps
+Sitemap: https://youssef-filali.vercel.app/sitemap.xml

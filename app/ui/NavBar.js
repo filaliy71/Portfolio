@@ -37,11 +37,11 @@ function NavBar() {
           <button onClick={() => setIsOpen(!isOpen)} type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
             <span className="sr-only">Open main menu</span>
             {!isOpen ? (
-              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg alt="menu" className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             ) : (
-              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg alt="menu" className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             )}
@@ -50,15 +50,15 @@ function NavBar() {
         <div id="logo" className="text-2xl md:text-3xl font-bold -tracking-2">
           <div className="">
             <Link href={"/"}>
-              <Image className="dark:hidden block" src={"/1-no_bg.png"} alt="logo" width={76} height={76} />
-              <Image className="hidden dark:block" src={"/2-no_bg.png"} alt="logo" width={76} height={76} />
+              <Image className="dark:hidden block" src={"/1-no_bg.png"} alt="yussuf logo" width={76} height={76} />
+              <Image className="hidden dark:block" src={"/2-no_bg.png"} alt="yussuf logo" width={76} height={76} />
             </Link>
           </div>
         </div>
         <nav className="hidden md:flex md:items-center md:space-x-8">
           <ul className="flex space-x-8 font-semibold -tracking-2 text-xl">
             <li>
-              <Link href="/#home" className="hover:text-blue-500">
+              <Link href="/" className="hover:text-blue-500">
                 Home
               </Link>
             </li>
@@ -89,7 +89,7 @@ function NavBar() {
 
       {isOpen && (
         <div className="md:hidden" id="mobile-menu">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <nav className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link href="/#home" className="block text-base font-semibold -tracking-2 hover:text-blue-500">
               Home
             </Link>
@@ -102,7 +102,7 @@ function NavBar() {
             <Link href="/#contact" className="block text-base font-semibold -tracking-2 hover:text-blue-500">
               Contact
             </Link>
-          </div>
+          </nav>
         </div>
       )}
     </motion.header>

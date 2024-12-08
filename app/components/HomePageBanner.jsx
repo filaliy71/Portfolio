@@ -1,34 +1,11 @@
 "use client";
 import { useEffect } from "react";
-import Tailwind from "../images/tailwind";
 import Link from "next/link";
 import { Player } from "@lottiefiles/react-lottie-player";
 import { motion, useAnimation } from "framer-motion";
-import Html from "../images/html";
-import Css from "../images/css";
-import Javascript from "../images/javascript";
-import Nextjs from "../images/nextjs";
-import Laravel from "../images/laravel";
-import Node from "../images/node";
 import Image from "next/image";
-import React from "../images/react";
 
 function HomePageBanner() {
-  const variants = {
-    hidden: { opacity: 0, y: 20, transition: { duration: 0.4 } },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  };
-
-  const stagger = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
   const controls = useAnimation();
 
   useEffect(() => {
@@ -49,12 +26,25 @@ function HomePageBanner() {
       },
     },
   };
+  const techLogos = [
+    { src: "/tech/laravel.svg", alt: "Laravel Logo" },
+    { src: "/tech/nextjs.svg", alt: "Next js Logo" },
+    { src: "/tech/react.svg", alt: "React Logo" },
+    { src: "/tech/tailwind.svg", alt: "tailwind Logo" },
+    { src: "/tech/webflow.svg", alt: "webflow Logo" },
+    { src: "/tech/css.svg", alt: "Css Logo" },
+    { src: "/tech/html.svg", alt: "Html Logo" },
+    { src: "/tech/js.svg", alt: "JavaScript Logo" },
+    { src: "/tech/node.svg", alt: "Node js Logo" },
+    { src: "/tech/wordpress.svg", alt: "wordpress Logo" },
+  ];
+
   return (
-    <div className="mb-56">
+    <div className="mb-20 max-md:mb-8">
       <motion.div variants={itemVariants} initial="hidden" animate="visible" className="rounded-full bg-blue-500 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute right-0 top-44"></motion.div>
-      <motion.div variants={itemVariants} initial="hidden" animate="visible" className="rounded-full bg-blue-400 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute ml-48"></motion.div>
+      <motion.div variants={itemVariants} initial="hidden" animate="visible" className="rounded-full bg-blue-400 w-72 z-0 h-72 bg-opacity-75 blur-3xl absolute left-44 max-md:hidden"></motion.div>
       <div className="container mx-auto flex flex-col-reverse md:flex-row justify-around h-full items-center p-5">
-        <motion.div variants={itemVariants} initial="hidden" animate="visible" className="mt-10 z-10 text-center md:text-left">
+        <motion.div variants={itemVariants} initial="hidden" animate="visible" className="z-10 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold z-10 flex justify-center md:justify-start items-center -tracking-4">
             Hi !, I’m Yusuf
             <span className="inline-block ml-2">
@@ -88,48 +78,28 @@ function HomePageBanner() {
               </a>
             </div>
           </div>
-          <div className="mt-12 md:mt-24 flex flex-col md:flex-row justify-center md:justify-start items-center">
-            <span className="text-lg font-semibold md:text-xl w-full md:w-44 text-center md:text-left">Technologies :</span>
-            <div className="flex flex-wrap justify-center md:justify-start space-x-3 md:space-x-4 mt-4 md:mt-0">
-              <motion.div variants={stagger} initial="hidden" animate={controls} className="flex flex-wrap justify-center md:justify-start space-x-3 md:space-x-4 mt-4 md:mt-0">
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: 10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Html />
-                </motion.div>
-
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: -10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Css />
-                </motion.div>
-
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: 10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Javascript />
-                </motion.div>
-
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: -10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Nextjs />
-                </motion.div>
-
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: 10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <React />
-                </motion.div>
-
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: -10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Laravel />
-                </motion.div>
-
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: 10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Node />
-                </motion.div>
-
-                <motion.div variants={variants} className="logo" whileHover={{ scale: 1.2, rotate: -10 }} whileTap={{ scale: 0.9 }} transition={{ type: "spring", stiffness: 300 }}>
-                  <Tailwind />
-                </motion.div>
-              </motion.div>
-            </div>
-          </div>
         </motion.div>
         <motion.div variants={itemVariants} initial="hidden" animate="visible" className="md:mt-0 md:mb-20">
-          <Image src="/code-typing-concept-illustration.png" width={300} height={300} alt="coding pic" className="drop-shadow-lg w-96" priority />
+          <Image src="/code-typing-animate.svg" width={384} height={384} alt="coding pic" className="drop-shadow-lg w-96" priority layout="intrinsic" />{" "}
         </motion.div>
+      </div>
+      <div className="flex justify-center max-md:py-12">
+        <div className="inline-flex w-3/5 max-md:w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+          <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8">
+            {techLogos.map((logo, index) => (
+              <li key={index}>
+                <Image src={logo.src} alt={logo.alt} width={50} height={50} className="rounded-md max-md:w-12 max-md:h-12" priority />
+              </li>
+            ))}
+          </ul>
+          <ul className="flex animate-infinite-scroll items-center justify-center md:justify-start [&_img]:max-w-none [&_li]:mx-8" aria-hidden="true">
+            {techLogos.map((logo, index) => (
+              <li key={index}>
+                <Image src={logo.src} alt={logo.alt} width={50} height={50} className="rounded-md max-md:w-12 max-md:h-12" priority />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

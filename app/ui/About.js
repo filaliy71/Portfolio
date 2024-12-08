@@ -26,48 +26,43 @@ export default function About() {
   };
 
   return (
-    <motion.div id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={containerVariants} className=" px-10 md:px-20 lg:px-32">
+    <motion.div id="about" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={containerVariants} className="px-4 md:px-20 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.h1 variants={itemVariants} className="text-5xl font-bold mb-8 -tracking-3">
           About Me
         </motion.h1>
         <div className="flex flex-col lg:flex-row">
           <motion.div variants={itemVariants} className="mb-8 lg:mb-0 lg:mr-16">
-            <Image src="/about.png" width={480} height={480} alt="coding pic" className="rounded-2xl" />
+            <Image src="/about.png" width={480} height={480} alt="A picture related to coding" className="rounded-2xl" loading="lazy" priority={false} />
             <div className="relative -mt-20 -right-10 lg:-right-16">
-              <div className="rounded-full bg-gray-100 dark:bg-gray-900 w-40 h-40 flex items-center justify-center ml-72">
+              <div className="rounded-full bg-gray-100 dark:bg-gray-900 w-40 h-40 flex items-center justify-center ml-72 max-md:hidden">
                 <Image src="/technologist.png" width={50} height={50} alt="technologist icon" className="absolute" />
                 <div>
-                  <motion.img
-                    src="/light-full.svg"
-                    width={150}
-                    height={150}
-                    className="block dark:hidden"
+                  <motion.div
                     animate={{ rotate: 360 }}
                     transition={{
                       repeat: Infinity,
                       duration: 5,
                       ease: "linear",
                     }}
-                  />
-                  <motion.img
-                    src="/dark-full.svg"
-                    width={150}
-                    height={150}
-                    className="hidden dark:block"
+                  >
+                    <Image src="/light-full.svg" width={150} height={150} className="block dark:hidden" alt="technologist icon 1" loading="lazy" />
+                  </motion.div>
+                  <motion.div
                     animate={{ rotate: 360 }}
                     transition={{
                       repeat: Infinity,
                       duration: 5,
                       ease: "linear",
                     }}
-                    alt="technologist icon"
-                  />
+                  >
+                    <Image src="/dark-full.svg" width={150} height={150} className="hidden dark:block" alt="technologist icon 2" loading="lazy" />
+                  </motion.div>
                 </div>
               </div>
             </div>
           </motion.div>
-          <motion.div variants={itemVariants} className="max-w-xl lg:text-left">
+          <motion.div variants={itemVariants} className="lg:text-left max-md:mt-16 max-md:text-center">
             <h2 className="text-3xl font-semibold mb-4 -tracking-2">
               Full-Stack Developer
               <br />
