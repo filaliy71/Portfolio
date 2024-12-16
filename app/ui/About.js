@@ -84,7 +84,7 @@ export default function About() {
 
           <motion.div variants={itemVariants}>
             <h5 className="text-xl font-semibold text-blue-500 mb-2">The Obvious</h5>
-            <p>HTML, CSS, JavaScript, WordPress, WebFlow PHP, MySQL, MongoDB, REST APIs/JSON, React Hooks, Fetch/Axios, Inertia.js</p>
+            <p>HTML, CSS, JavaScript, WordPress, WebFlow, PHP, MySQL, MongoDB, REST APIs/JSON, React Hooks, Fetch/Axios, Inertia.js</p>
           </motion.div>
 
           <motion.div variants={itemVariants}>
