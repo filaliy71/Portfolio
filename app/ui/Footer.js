@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 export default function Footer() {
   return (
     <footer className="py-12">
@@ -11,21 +10,19 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Made with 💖 by Youssef Filali
               Talha
             </p>
-          </div>  
+          </div>
           <div className="flex space-x-6">
             <Link
               href="https://github.com/filaliy71"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 dark:hover:text-white hover:text-gray-500 transition-colors duration-300"
-            >
+              className="text-gray-400 dark:hover:text-white hover:text-gray-500 transition-colors duration-300">
               <span className="sr-only">GitHub</span>
               <svg
                 className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   fillRule="evenodd"
                   d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
@@ -37,15 +34,13 @@ export default function Footer() {
               href="https://linkedin.com/in/youssef-filali-talha-b23321297"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 dark:hover:text-white hover:text-gray-500 transition-colors duration-300"
-            >
+              className="text-gray-400 dark:hover:text-white hover:text-gray-500 transition-colors duration-300">
               <span className="sr-only">LinkedIn</span>
               <svg
                 className="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
+                aria-hidden="true">
                 <path
                   fillRule="evenodd"
                   d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
@@ -54,6 +49,37 @@ export default function Footer() {
               </svg>
             </Link>
           </div>
+        </div>
+      </div>
+      <div className="relative group">
+        <Link
+          href="/Resume.pdf"
+          title="Download my CV"
+          target="_blank"
+          className="fixed px-3 py-3 font-bold -tracking-1 rounded-full shadow bg-black dark:bg-slate-100 text-white dark:text-black w-12 h-12 bottom-5 left-5 hover:scale-105 transition-all duration-300 flex items-center justify-center">
+          <svg
+            width={24}
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3 15C3 17.8284 3 19.2426 3.87868 20.1213C4.75736 21 6.17157 21 9 21H15C17.8284 21 19.2426 21 20.1213 20.1213C21 19.2426 21 17.8284 21 15"
+              className="stroke-white dark:stroke-black"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
+              className="stroke-white dark:stroke-black"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Link>
+        <div className="fixed bottom-7 left-44 font-semibold -translate-x-1/2 hidden group-hover:flex items-center bg-black dark:bg-slate-100 text-white dark:text-black text-sm px-3 py-2 rounded-lg shadow-lg transition-all duration-300">
+          Click to download my CV
         </div>
       </div>
     </footer>
